@@ -57,6 +57,10 @@
       const contagemDoMesEspecifico = calcularDiasDaSemana(anoEspecifico, mesEspecifico);
 
       var html = "<table border='1'> <tr> <td>Dia</td> <td>Quantidade</td> <td>Dias</td> <tr>";
+
+      html += "<tr> <td> Sábado </td> <td>" + contagemDoMesEspecifico.contagem["Sábado"] + "</td>";
+      html += "<td>" + contagemDoMesEspecifico.dias["Sábado"] + "</td></tr>";
+
       html += "<tr> <td> Segunda-feira</td> <td>" + contagemDoMesEspecifico.contagem["Segunda-feira"] + "</td>";
       html += "<td>" + contagemDoMesEspecifico.dias["Segunda-feira"] + "</td></tr>";
 
@@ -68,8 +72,14 @@
 
       html += "<tr> <td>Quinta-feira</td> <td>" + contagemDoMesEspecifico.contagem["Quinta-feira"] + "</td>";
       html += "<td>" + contagemDoMesEspecifico.dias["Quinta-feira"] + "</td></tr>";
-      html += "<tr> <td> Segunda-feira</td> <td>" + contagemDoMesEspecifico.contagem["Sexta-feira"] + "</td>";
-      html += "<td>" + contagemDoMesEspecifico.dias["Sexta-feira"] + "</td></tr></table>";
+      
+      html += "<tr> <td> Sexta-feira</td> <td>" + contagemDoMesEspecifico.contagem["Sexta-feira"] + "</td>";
+      html += "<td>" + contagemDoMesEspecifico.dias["Sexta-feira"] + "</td></tr>";
+
+      html += "<tr> <td> Domingo</td> <td>" + contagemDoMesEspecifico.contagem["Domingo"] + "</td>";
+      html += "<td>" + contagemDoMesEspecifico.dias["Domingo"] + "</td></tr>";
+
+      html += "</table>";
 
       document.querySelector("#resultado").innerHTML += html;
       // document.querySelector("#resultado").innerHTML+= "segunda:"+contagemDoMesEspecifico.dias["Segunda-feira"];
