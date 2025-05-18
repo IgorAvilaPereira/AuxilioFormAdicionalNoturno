@@ -95,24 +95,24 @@
       gera(mes, ano);
     }
 
-    function replaceFirstAndLastQuote(str) {
-      if (!str) {
-        return "";
-      }
+    // function replaceFirstAndLastQuote(str) {
+    //   if (!str) {
+    //     return "";
+    //   }
 
-      let firstQuoteIndex = str.indexOf('"');
-      let lastQuoteIndex = str.lastIndexOf('"');
+    //   let firstQuoteIndex = str.indexOf('"');
+    //   let lastQuoteIndex = str.lastIndexOf('"');
 
-      if (firstQuoteIndex === -1 || lastQuoteIndex === -1 || firstQuoteIndex === lastQuoteIndex) {
-        return str; // No two quotes to replace
-      }
+    //   if (firstQuoteIndex === -1 || lastQuoteIndex === -1 || firstQuoteIndex === lastQuoteIndex) {
+    //     return str; // No two quotes to replace
+    //   }
 
-      let newStr = str.substring(0, firstQuoteIndex) + "'" +
-        str.substring(firstQuoteIndex + 1, lastQuoteIndex) + "'" +
-        str.substring(lastQuoteIndex + 1);
+    //   let newStr = str.substring(0, firstQuoteIndex) + "'" +
+    //     str.substring(firstQuoteIndex + 1, lastQuoteIndex) + "'" +
+    //     str.substring(lastQuoteIndex + 1);
 
-      return newStr;
-    }
+    //   return newStr;
+    // }
 
     function imprimir() {
       $('textarea').each(function () {
