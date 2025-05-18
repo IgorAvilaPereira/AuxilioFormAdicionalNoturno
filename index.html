@@ -1,6 +1,7 @@
 <html>
 
 <head>
+  <title>Auxílio para o Preenchimento do Formulário de Adicionar Noturno</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -53,7 +54,7 @@
     }
 
     function gera(mesEspecifico, anoEspecifico) {
-      document.querySelector("#resultado").innerHTML = "Contagem para o mês " + mesEspecifico + " de " + anoEspecifico + ":<br>";
+      document.querySelector("#resultado").innerHTML = "Contagem para o mês <b style='color:red'>" + mesEspecifico + "</b> de <b style='color:red'>" + anoEspecifico + "</b>:<br>";
       const contagemDoMesEspecifico = calcularDiasDaSemana(anoEspecifico, mesEspecifico);
 
       var html = "<table border='1'> <tr> <td>Dia</td> <td>Quantidade</td> <td>Dias</td> <tr>";
