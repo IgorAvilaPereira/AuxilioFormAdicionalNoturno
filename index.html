@@ -114,7 +114,10 @@
           var dataBrasil = dia + "/" + mes + "/" + ano;
 
           // Inserir a data no HTML
-          document.getElementById("dataAtual").innerHTML = dataBrasil;
+          try {
+            document.getElementById("dataAtual").innerHTML = dataBrasil;
+          } catch (erro) {
+          }
         }
     </script>
 </head>
