@@ -1,10 +1,10 @@
 # AuxilioFormAdicionalNoturno
 Auxílio para o Preenchimento do Formulário de Adicionar Noturno (IFRS)
 
-Coloque o mês e o ano desejado e veja a quantidade e quais são os dias de cada dia de semana.
+Coloque o mês e o ano desejado e selecione os dias da semana onde a sua carga de trabalho ultrapasse às 22h. Automaticamente, estes dias serão preenchidos no formulário de solicitação. Em seguida, basta colocar seu nome, seu siape, seu campus e etc.
 
-Depois preencha corretamente o formulário de acordo com quais dias você pode solicitar o adicional, e clique em *imprimir*. Salve em *pdf* e encaminhe para o setor responsável.
+Depois clique em *imprimir*. Salve em *pdf* e encaminhe por email (em forma de anexo) para o setor responsável (Cogep do seu campus).
 
-E está feito!
+E está feito! Acesse por este link: https://igoravilapereira.github.io/AuxilioFormAdicionalNoturno/
 
 ![demo](demo.png)
