@@ -82,15 +82,16 @@
                 return;
             }
 
-            try {
-                const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+
+            const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
                "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+            try {
                 document.querySelector("#mes_competencia").innerHTML = meses[mesEspecifico-1]+"/"+anoEspecifico;    
             } catch (erro) {
                 // alert("#mes_competencia: removido do formulário");
             } 
             
-            document.querySelector("#resultado").innerHTML = `Contagem para o mês <b class="text-danger">${mesEspecifico}</b> de <b class="text-danger">${anoEspecifico}</b>:<br>`;
+            document.querySelector("#resultado").innerHTML = `Contagem para o mês <b class="text-danger">${meses[mesEspecifico-1]}</b> de <b class="text-danger">${anoEspecifico}</b>:<br>`;
             const contagemDoMesEspecifico = calcularDiasDaSemana(anoEspecifico, mesEspecifico);
             let html = `<table class="table table-bordered">
                             <thead class="thead-light">
