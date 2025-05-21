@@ -77,15 +77,19 @@
         }
 
         function gera(mesEspecifico, anoEspecifico) {
+            if (!(mesEspecifico >= 1 && mesEspecifico <= 12 && anoEspecifico >= 1900)) {
+                alert("Mês ou ano incorretos");
+                return;
+            }
+
             try {
                 const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
                "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
                 document.querySelector("#mes_competencia").innerHTML = meses[mesEspecifico-1]+"/"+anoEspecifico;    
             } catch (erro) {
                 // alert("#mes_competencia: removido do formulário");
-            }         
-
-
+            } 
+            
             document.querySelector("#resultado").innerHTML = `Contagem para o mês <b class="text-danger">${mesEspecifico}</b> de <b class="text-danger">${anoEspecifico}</b>:<br>`;
             const contagemDoMesEspecifico = calcularDiasDaSemana(anoEspecifico, mesEspecifico);
             let html = `<table class="table table-bordered">
