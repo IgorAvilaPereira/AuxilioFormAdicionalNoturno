@@ -57,14 +57,22 @@
 
         
         function doalert(checkboxElem, contagemDoMesEspecifico) {            
-            if (checkboxElem.checked) {                
-                for (let index = 0; index < contagemDoMesEspecifico.length; index++) {                    
-                    document.querySelector("#dia_"+contagemDoMesEspecifico[index]).innerHTML = "20";                    
-                }
+            if (checkboxElem.checked) {   
+                try {             
+                    for (let index = 0; index < contagemDoMesEspecifico.length; index++) {                    
+                        document.querySelector("#dia_"+contagemDoMesEspecifico[index]).innerHTML = "20";                    
+                    }
+                } catch (erro) {
+                    alert("#dia_"+contagemDoMesEspecifico[index]+": removido do formulário");
+                }                 
             } else {
-                for (let index = 0; index < contagemDoMesEspecifico.length; index++) {
-                    document.querySelector("#dia_"+contagemDoMesEspecifico[index]).innerHTML = "";                    
-                }    
+                try {  
+                    for (let index = 0; index < contagemDoMesEspecifico.length; index++) {
+                        document.querySelector("#dia_"+contagemDoMesEspecifico[index]).innerHTML = "";                    
+                    }    
+                } catch (erro) {
+                    alert("#dia_"+contagemDoMesEspecifico[index]+": removido do formulário");
+                }
             }
         }
 
@@ -74,6 +82,7 @@
                "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
                 document.querySelector("#mes_competencia").innerHTML = meses[mesEspecifico-1]+"/"+anoEspecifico;    
             } catch (erro) {
+                alert("#mes_competencia: removido do formulário");
             }         
 
 
@@ -130,6 +139,7 @@
             try {
                 document.getElementById("dataAtual").innerHTML = dataBrasil;
             } catch (erro) {
+                alert("dataAtual removido do form");
             }
         }
     </script>
